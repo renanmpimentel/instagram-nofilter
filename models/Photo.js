@@ -15,7 +15,12 @@ var Photos = {
       var json = [];
       api.tag_media_recent(tag, function(err, result, remaining, limit) {
         result.forEach(function(each) {
-          json.push({"standard": each.images.standard_resolution.url });
+          if(each.filter !== 'Normal') {
+            json.push({
+              "standard": each.images.standard_resolution.url,
+              "filter": each.filter
+               });
+          }
         });
 
         resolve(json);
