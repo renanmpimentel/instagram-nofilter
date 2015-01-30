@@ -1,22 +1,31 @@
 {
   "name": "instagram-nofilter",
   "version": "0.0.1",
-  "description": "",
+  "description": "Crawler to fetch photos with #nofilter hashtag on Instagram",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/*"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/renanmpimentel/instagram-nofilter.git"
   },
   "author": "wbruno / renanmpimentel",
+  "keywords": [
+    "instagram"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/renanmpimentel/instagram-nofilter/issues"
   },
   "homepage": "https://github.com/renanmpimentel/instagram-nofilter",
   "dependencies": {
-    "instagram-node": "~0.5.6"
+    "express": "^4.11.1",
+    "instagram-node": "^0.5.6",
+    "node-config": "0.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0"
   }
 }
+
