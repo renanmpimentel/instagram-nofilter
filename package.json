@@ -20,12 +20,11 @@
   },
   "homepage": "https://github.com/renanmpimentel/instagram-nofilter",
   "dependencies": {
+    "config": "^1.10.0",
     "express": "^4.11.1",
-    "instagram-node": "^0.5.6",
-    "node-config": "0.0.2"
+    "instagram-node": "^0.5.6"
   },
   "devDependencies": {
     "mocha": "^2.1.0"
   }
 }
-
