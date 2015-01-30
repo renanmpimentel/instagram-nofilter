@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/renanmpimentel/instagram-nofilter/issues"
   },
-  "homepage": "https://github.com/renanmpimentel/instagram-nofilter"
+  "homepage": "https://github.com/renanmpimentel/instagram-nofilter",
+  "dependencies": {
+    "instagram-node": "~0.5.6"
+  }
 }
