@@ -20,7 +20,9 @@ var Photos = {
               "link": each.link,
               "standard": each.images.standard_resolution.url,
               "filter": each.filter,
-              "tags": each.tags
+              "tags": each.tags,
+              "user": each.username,
+              "likes": each.likes.count
             };
             if (each.caption) {
               ret.text = each.caption.text;
