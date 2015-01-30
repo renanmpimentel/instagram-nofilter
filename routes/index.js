@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 router.get('/recents', function(req, res) {
   var promise = Photo.getMediaRecentByTag('nofilter');
   promise.then(function(resolve, reject) {
-    res.json(resolve);
+    res.json({"photos": resolve});
   });
 });
 
