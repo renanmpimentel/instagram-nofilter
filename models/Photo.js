@@ -17,8 +17,11 @@ var Photos = {
         result.forEach(function(each) {
           if(each.filter !== 'Normal') {
             json.push({
+              "link": each.link,
               "standard": each.images.standard_resolution.url,
-              "filter": each.filter
+              "filter": each.filter,
+              "tags": each.tags,
+              "text": each.caption.text
                });
           }
         });
