@@ -8,6 +8,8 @@ api.use({
   client_secret: config.get('instagram_api.client_secret')
 });
 
-api.tag('nofilter', function(err, result, remaining, limit) {
-  console.log(result, remaining);
+api.tag_media_recent('nofilter', function(err, result, remaining, limit) {
+  result.forEach(function(each) {
+    console.log(each.images.standard_resolution.url);
+  });
 });
