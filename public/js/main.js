@@ -3,11 +3,12 @@
       template    = Handlebars.compile(source),
       $container  = $('#container');
 
+  $container.html('Loading...');
+
   $.ajax({
     url: '/recents',
     type: 'GET',
     success: function(data){
-      console.log(template(data));
       $container.html(template(data));
     }
   });
