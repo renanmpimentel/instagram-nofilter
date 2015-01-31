@@ -50,8 +50,15 @@
             </div>
             <input type="checkbox" id="toggle-4" checked class="panel-image-toggle">
             <div class="panel-body">
-                <h4>\{{username}}</h4>
-                <p>\{{filter}}</p>
+                <h4><a href="\{{link}}" target="_blank">\{{username}}</a></h4>
+
+                <button type="button" class="btn btn-info btn">
+                  <span class="glyphicon glyphicon-tint" aria-hidden="true"></span> \{{filter}} 
+                </button>
+
+                <button type="button" class="btn btn-warning btn">
+                  <span class="glyphicon glyphicon-tags" aria-hidden="true"></span> #nofilter 
+                </button>
             </div>
         </div>
     </div>
