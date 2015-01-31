@@ -3,8 +3,6 @@
       template    = Handlebars.compile(source),
       $container  = $('#container');
 
-  $container.html('Loading...');
-
   $.ajax({
     url: '/recents',
     type: 'GET',
@@ -12,4 +10,15 @@
       $container.html(template(data));
     }
   });
-}(jQuery));
+
+  $("#more-images").click(function(e){
+    $.ajax({
+      url: '/recents',
+      type: 'GET',
+      success: function(data){
+        console.log(data);
+        $container.append(template(data));
+      }
+    });
+  });
+ }(jQuery));
