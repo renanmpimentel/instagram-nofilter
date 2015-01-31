@@ -21,7 +21,6 @@ var Photos = {
               "link": each.link,
               "standard": each.images.standard_resolution.url,
               "filter": each.filter,
-              "tags": each.tags,
               "username": each.user.username,
               "likes": each.likes.count,
             };
