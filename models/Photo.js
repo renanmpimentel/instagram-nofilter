@@ -13,7 +13,8 @@ var Photos = {
   getMediaRecentByTag: function(tag) {
     return new Promise(function(resolve, reject) {
       var json = [];
-      api.tag_media_recent(tag, function(err, result, remaining, limit) {
+
+      api.tag_media_recent(tag, function(err, result, pagination, remaining, limit) {
         result.forEach(function(each) {
           if(each.filter !== 'Normal') {
             var ret = {
@@ -22,11 +23,12 @@ var Photos = {
               "filter": each.filter,
               "tags": each.tags,
               "username": each.user.username,
-              "likes": each.likes.count
+              "likes": each.likes.count,
             };
-            if (each.caption) {
-              ret.text = each.caption.text;
-            }
+
+            ret.next_max_tag_id = pagination.next_max_tag_id,
+            ret.min_tag_id = pagination.min_tag_id,
+
             json.push(ret);
           }
         });
